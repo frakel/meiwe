@@ -18,7 +18,7 @@ http://music-encoding.org/
 
 ------------------------------------------------
 
-MEIWE – Music Encoding Initiative Web Editor is a web-based Musiceditor for MEI-Files.
+MEIWE – Music Encoding Initiative Web Editor is a web-based music editor for MEI-Files.
 It could become useful for everyone, who wants to edit MEI-Files easily and with live preview. 
 In the future there will be other functions: Editing Meta-Data, intelligent XML-Tree-View, 
 easier and overseeable editing.
