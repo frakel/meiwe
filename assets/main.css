@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#split-pane-1 {
+ height: calc( 100% - 56px );
+}
+.split-pane-divider {
+  box-shadow: 0 0 3px #333;
+  background: #eee;
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+#left-component {
+  width: 50%;
+
+}
+#divider {
+  left: 50%; /* same as left component width */
+  width: 5px;
+}
+#right-component {
+  left: 50%;
+  margin-left: 5px; /* same as divider width */
+}
+#header {
+
+     width: 100%;
+     min-width: 1000px;
+
+
+     z-index: 100;
+
+}
+#header #title {
+font-family: 'Permanent Marker', cursive;
+
+
+     color: white;
+}
+
+#openclose {
+
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     z-index: 1000;
+}
+
+#svg_output {
+
+}
+a {
+  color: white;
+}
+
+#jstree_demo_div {
+
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  z-index: 10000;
+  top: 100px;
+  left: calc( 50% - 250px);
+  background: white;
+  color: black;
+  box-shadow: 0 0 5px #000;
+}
+#menuright {
+     position: absolute;
+     right: 0;
+     width: 200px;
+     height: 300px;
+     background: #fff;
+     box-shadow: 2px 10px 10px grey;
+     padding: 10px;
+     z-index: 100;
+}
+#wrap {
+
+
+  /*position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+*/
+  height: 100%;
+}
+
+.editor {
+  width: 100% ;
+  height: 100%;
+  padding: 10px;
+  border: 0px;
+  background: #aaa;
+resize: none;
+
+}

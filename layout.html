@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<title>MEI Web Editor</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="frameworks/split-pane/split-pane.css" />
+<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+<link rel="stylesheet" href="https://unpkg.com/blaze">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--JSTREE-->
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+<!-- Own -->
+<link rel="stylesheet" href="assets/main.css" />
+</head>
+<body>
+
+  <div id="header">
+
+    <nav class="c-nav c-nav--inline">
+      <span class="c-nav__content" id="title">MEI Web Editor</span>
+  		<!--<span class="c-nav__item c-nav__item--success"><i class="fa fa-save"></i></span>
+  		<span class="c-nav__item c-nav__item--brand"><i class="fa fa-folder-open"></i></span>-->
+<span class="c-nav__item c-nav__item--brand c-nav__item--right"><a href="javascript: loadverovio();"><i class="fa fa-television"></i></a></span>
+  	</nav>
+
+
+          </div>
+          <!--<div id="menuright">
+          </div>-->
+
+          <div id="split-pane-1" class="split-pane fixed-left">
+            <div class="split-pane-component" id="left-component">
+              <div class="editor" id="editor"></div>
+            </div>
+            <div class="split-pane-divider" id="divider"></div>
+            <div class="split-pane-component" id="right-component">
+
+
+            <div id="output" style="width: 100%; height:100%;"></div>
+          </div>
+        </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+<script src="frameworks/split-pane/split-pane.js"></script>
+<script>
+var url = "mei/jesu.mei";
+var vrvToolkit = new verovio.toolkit();
+var editor = ace.edit("editor");
+
+$(function() {
+var paneheight = $(document).height()-$("#header").height()-20;
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setMode("ace/mode/xml");
+
+
+  $('.split-pane-divider').on('mouseup', function () {
+    editor.resize();
+    loadverovio();
+    console.log("resize");
+  })
+
+  $('div.split-pane').splitPane();
+  editor.getSession().on('change', function(e) {
+      loadverovio();
+  });
+
+
+  $.ajax({
+      url: url
+      , dataType: "text"
+      , success: function(data) {
+
+          editor.setValue(data);
+          editor.gotoLine(1);
+          loadverovio();
+      }
+  });
+  $( "#output" ).click(function() {
+  loadverovio();
+      });
+});
+
+
+function loadverovio() {
+
+
+  var zoom = 30;
+  pageHeight = $("#output").height() * 100 / zoom ;
+  pageWidth = $("#output").width() * 100 / zoom ;
+  options = {
+                      pageHeight: pageHeight,
+                      pageWidth: pageWidth,
+
+                      scale: zoom,
+                      adjustPageHeight: 1,
+                      ignoreLayout: 1
+                  };
+          console.log( options );
+          vrvToolkit.setOptions( options );
+
+
+        var svg = vrvToolkit.renderData(editor.session.getValue());
+        $("#output").html(svg);
+        page = vrvToolkit.getPageCount(1, options);
+        console.log(page);
+}
+
+
+</script>
+
+</body>
+</html>
