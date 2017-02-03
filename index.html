@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<title>MEI Web Editor</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="frameworks/split-pane.css" />
+<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+<link rel="stylesheet" href="https://unpkg.com/blaze">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Antic" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
+<link type="text/css" rel="stylesheet" href="frameworks/xonomy/xonomy.css"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+<!-- Own -->
+<link rel="stylesheet" href="assets/main.css" />
+</head>
+<body>
+  <div class="c-card u-highest" id="settings">
+    <div class="c-card__item c-card__item--brand">Einstellungen</div>
+    <div class="c-card__item"><!--
+      <label class="c-toggle">
+      MEI-Datei automatisch einfalten?
+      <input type="checkbox" checked>
+      <div class="c-toggle__track">
+        <div class="c-toggle__handle"></div>
+      </div>
+    </label>
+-->
+    <label class="c-toggle">
+   Farbprofil (Editor)
+
+
+<select class="c-field" id="colorprofile">
+ <option value="ace/theme/monokai">Monokai</option>
+ <option value="ace/theme/pastel_on_dark">Pastel on dark</option>
+ <option value="ace/theme/clouds">Clouds</option>
+ <option value="ace/theme/eclipse">Eclipse</option>
+ <option value="ace/theme/github">Github</option>
+ <option value="ace/theme/xcode">xCode</option>
+</select>
+
+
+  </label>
+    </div>
+    <div class="c-card__item">
+      <button class="c-button u-xsmall" id="closesettings">Schließen<button>
+    </div>
+  </div>
+  <div id="header">
+    <nav class="c-nav c-nav--inline">
+      <span class="c-nav__content" id="title">MEI Web Editor</span>
+      <span class="c-nav__item c-nav__item--brand c-nav__item--right"><a href="javascript: loadsettings();"><i class="fa fa-gear"></i></a></span>
+
+      <!--<span class="c-nav__item c-nav__item--right" id="uploadbox">
+        <label for="upload" class="uploadButton"><i class="fa fa-folder-open"></i></label>
+        <input type="file" name="upload" id="upload">
+      </span>-->
+  	</nav>
+  </div>
+          <!--<div id="menuright">
+          </div>-->
+
+  <div id="split-pane-1" class="split-pane fixed-left">
+    <div class="split-pane-component" id="left-component">
+      <div class="editor" id="editor"></div>
+      <div id="toolbox"><a title="Fold everything" href="javascript: editor.getSession().foldAll(2);"><i class="fa fa-list-alt"></i></a>
+      </div>
+    </div>
+    <div class="split-pane-divider" id="divider"></div>
+    <div class="split-pane-component" id="right-component">
+      <div id="viewbox"><a title="Toggle View" href="javascript: toggle_viewbox();"><i id="viewboxi" class="fa fa-book"></i></a>
+</div>
+<div id="output_meta" style="width: 100%; height: 100%;">
+
+  <div id="xml_tree">
+
+  </div>
+
+</div>
+      <div id="output_svg" style="width: 100%; height:100%;"></div>
+      <div id="output-navi">
+        <span><a href="javascript: prevPage()" id="prevpage"><i class="fa fa-arrow-left"></i></a></span>
+        <span><a href="javascript: zoomIn();" id="zoomin"><i class="fa fa-search-plus"></i></a></span>
+        <span><a href="javascript: zoomOut();" id="zoomout"><i class="fa fa-search-minus"></i></a></span>
+        <span><a href="javascript: nextPage();" id="nextpage"><i class="fa fa-arrow-right"></i></a></span>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://www.verovio.org/javascript/latest/verovio-toolkit.js"></script>
+<script src="frameworks/xonomy/xonomy.js"></script>
+<script src="frameworks/split-pane.js"></script>
+<script type="text/javascript">
+
+
+</script>
+
+<script src="assets/editor.js"></script>
+</body>
+</html>
