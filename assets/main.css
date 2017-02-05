@@ -4,6 +4,7 @@ body {
     min-height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Poiret One", sans-serif;
 }
 #split-pane-1 {
     height: calc( 100% - 56px);
@@ -33,7 +34,7 @@ body {
     z-index: 100;
 }
 #header #title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Arizonia', cursive;
     color: white;
 }
 #openclose {
@@ -99,7 +100,7 @@ input[type="file"] {
 }
 #output-navi {
     position: absolute;
-    bottom: 10px;
+    top: 5px;
     right: calc( 50% - 66px);
     border-radius: 5px;
     background: #888;
@@ -124,24 +125,25 @@ input[type="file"] {
 #output-navi span a:hover {
     color: white;
 }
-#settings {
-    display: none;
-    position: absolute;
-    width: 500px;
-    top: 200px;
-    left: calc(50% - 250px);
-    z-index: 10000;
-    font-family: 'Antic', sans-serif;
+.popup {
+  display: none;
+  position: absolute;
+  width: 500px;
+  top: 200px;
+  left: calc(50% - 250px);
+  z-index: 10000;
+  font-family: 'Antic', sans-serif;
 }
-#settings label {
+
+.popup label {
   padding:10px;
 
 }
-#settings label input, #settings label select {
+.popup label input, #settings label select {
   padding: 0 10px;
 }
 #toolbox {
-  position:absolute;
+  position: absolute;
   right: 0;
   top:0;
   background: black;
