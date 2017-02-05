@@ -5,16 +5,7 @@ Er soll eine einfache Möglichkeit bieten, MEI-Dateien möglichst ohne Vorausset
 Nach und nach sollen weitere Funktionen hinzukommen: Metadaten-Bearbeitung, intelligente XML-Tree-Anzeige, 
 einfachere und übersichtlichere Editiermöglichkeiten.
 
-Genutzte Frameworks/Plugins etc.:
-
-Verovio: http://www.verovio.org/index.xhtml
-ACE: https://ace.c9.io/
-Split-Pane: https://github.com/shagstrom/split-pane
-Blaze CSS: http://blazecss.com/
-
-Links:
-
-http://music-encoding.org/
+Live preview: http://mozartspiel.de/meiwe/beta/
 
 ------------------------------------------------
 
@@ -22,6 +13,9 @@ MEIWE – Music Encoding Initiative Web Editor is a web-based music editor for M
 It could become useful for everyone, who wants to edit MEI-Files easily and with live preview. 
 In the future there will be other functions: Editing Meta-Data, intelligent XML-Tree-View, 
 easier and overseeable editing.
+
+-------------------------------------------------
+
 
 used frameworks/plugins etc.:
 
