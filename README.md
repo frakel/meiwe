@@ -5,7 +5,6 @@ Er soll eine einfache Möglichkeit bieten, MEI-Dateien möglichst ohne Vorausset
 Nach und nach sollen weitere Funktionen hinzukommen: Metadaten-Bearbeitung, intelligente XML-Tree-Anzeige, 
 einfachere und übersichtlichere Editiermöglichkeiten.
 
-Live preview: http://mozartspiel.de/meiwe/beta/
 
 ------------------------------------------------
 
@@ -16,6 +15,9 @@ easier and overseeable editing.
 
 -------------------------------------------------
 
+Live preview: http://meiwe.de
+
+-------------------------------------------------
 
 used frameworks/plugins etc.:
 
