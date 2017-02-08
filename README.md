@@ -1,9 +1,6 @@
 # meiwe
 
-MEIWE – Music Encoding Initiative Web Editor ist ein webbasierter Editor für Musiknotation. Zur Codierung der Musik wird das für MEI-Schema verwendet. Dieses verbindet eine klare und eindeutige Architektur mit den Ansprüchen wissenschaftlicher Editionspraxis und ist derzeit im Begriff, die Möglichkeiten der digitalen Edition zu revolutionieren.
-Er soll eine einfache Möglichkeit bieten, MEI-Dateien möglichst ohne Voraussetzungen zu editieren und anzuzeigen. 
-Nach und nach sollen weitere Funktionen hinzukommen: Metadaten-Bearbeitung, intelligente XML-Tree-Anzeige, 
-einfachere und übersichtlichere Editiermöglichkeiten.
+MEIWE – Music Encoding Initiative Web Editor ist ein webbasierter Editor für Musiknotationen. Zur Codierung der Musik wird das MEI-Schema der Music Encoding Initiative verwendet. Dieses verbindet eine klare und eindeutige Architektur mit den Ansprüchen wissenschaftlicher Editionspraxis und ist derzeit im Begriff, die Möglichkeiten der digitalen Edition zu revolutionieren. Er soll eine einfache Möglichkeit bieten, MEI-Dateien möglichst ohne Voraussetzungen zu editieren und anzuzeigen. Nach und nach sollen weitere Funktionen hinzukommen: Metadaten-Bearbeitung, intelligente XML-Tree-Anzeige, einfachere und übersichtlichere Editiermöglichkeiten.
 
 
 ------------------------------------------------
